@@ -1,0 +1,162 @@
+{
+    "asset": {
+        "generator": "none",
+        "version": "2.0"
+    },
+    "extensionsUsed": [
+        "MPEG_scene_interactivity"
+    ],
+    "extensionsRequired": [
+        "MPEG_scene_interactivity"
+    ],
+    "extensions": {
+        "MPEG_scene_interactivity": {
+            "triggers": [
+                {
+                    "type": "TRIGGER_COLLISION",
+                    "nodes": [
+                        0
+                    ],
+                    "primitives": [
+                        {
+                            "type": "BV_SPHEROID",
+                            "radius": 0.5,
+                            "centroid": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TRIGGER_COLLISION",
+                    "nodes": [
+                        1
+                    ],
+                    "primitives": [
+                        {
+                            "type": "BV_SPHEROID",
+                            "radius": 0.5,
+                            "centroid": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "type": "ACTION_SET_HAPTIC",
+                    "hapticActionNodes": [
+                        {
+                            "node": 0,
+                            "hapticActionMedias": [
+                                {
+                                    "mediaIndex": 0,
+                                    "perceptionIndices": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "ACTION_SET_HAPTIC",
+                    "hapticActionNodes": [
+                        {
+                            "node": 0,
+                            "hapticActionMedias": [
+                                {
+                                    "mediaIndex": 1,
+                                    "perceptionIndices": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "behaviors": [
+                {
+                    "triggers": [
+                        0,
+                        1
+                    ],
+                    "actions": [
+                        0
+                    ],
+                    "triggersCombinationControl": "#0&#1",
+                    "triggersActivationControl": "TRIGGER_ACTIVATE_EACH_ENTER",
+                    "actionsControl": "SEQUENTIAL",
+                    "priority": 0
+                },
+                {
+                    "triggers": [
+                        0,
+                        1
+                    ],
+                    "actions": [
+                        1
+                    ],
+                    "triggersCombinationControl": "#0&#1",
+                    "triggersActivationControl": "TRIGGER_ACTIVATE_EACH_EXIT",
+                    "actionsControl": "SEQUENTIAL",
+                    "priority": 0
+                }
+            ]
+        }
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "main",
+            "nodes": [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "player",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                2.0,
+                0.0
+            ],
+            "mesh": 1
+        },
+        {
+            "name": "obstacle",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                4.0,
+                4.0,
+                4.0
+            ],
+            "translation": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "mesh": 1
+        }
+    ]
+}
