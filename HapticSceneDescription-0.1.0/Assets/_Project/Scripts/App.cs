@@ -17,6 +17,7 @@ namespace HapticSceneDescription
             _sd = await SceneDescriptionLoader.LoadAsync("sd.gltf");
             _hapticAdapter = _sd.HapticAdapter;
             _hapticAdapter.UseHapticDevice = true;
+            _hapticAdapter.Start();
             _interactivity = new InteractivityController(_sd);
             // * Add a PlayerController to the player GameObject
             GameObject.Find("player").AddComponent<PlayerController>();

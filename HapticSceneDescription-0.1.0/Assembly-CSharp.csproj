@@ -59,7 +59,7 @@
     <UnityVersion>2020.3.48f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Project\Scripts\Gltf\Controllers\Partial_SceneDescriptionLoader\ScenesLoader.cs" />
@@ -82,6 +82,7 @@
     <Compile Include="Assets\_Project\Scripts\Gltf\Controllers\Partial_SceneDescriptionLoader\MpegSceneInteractivity\ActionsLoader.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Adapters\MpegSceneInteractivity\ITriggerAdapter.cs" />
     <Compile Include="Assets\_Project\Scripts\Test\PlayerController.cs" />
+    <Compile Include="Assets\_Project\Scripts\GeomagicTouch\GeomagicTouchController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -394,18 +395,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityDLL">
-      <HintPath>Assets\Plugins\GloveSDK\Plugins\UnityDLL.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NDAPIWrapper">
-      <HintPath>Assets\Plugins\GloveSDK\Plugins\x86_64\NDAPIWrapper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NDAPIUnity">
-      <HintPath>Assets\Plugins\GloveSDK\Plugins\x86_64\NDAPIUnity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

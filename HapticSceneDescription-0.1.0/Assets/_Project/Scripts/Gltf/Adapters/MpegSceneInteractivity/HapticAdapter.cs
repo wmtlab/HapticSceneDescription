@@ -4,9 +4,8 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using HapticSceneDescription.GeomagicTouch;
 using HapticSceneDescription.Gltf.Properties.MpegSceneInteractivity;
-using NDAPIWrapperSpace;
-using UnityDLL.Haptic;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -21,6 +20,7 @@ namespace HapticSceneDescription.Gltf.Adapters
         private int _currentSignalIndex = -1;
         private bool _isPlaying = false;
         private CancellationTokenSource _cts;
+        private GeomagicTouchController _hapticSystem;
         public void TryPlay(SetHapticAction actionData)
         {
             if (_isPlaying)
@@ -45,6 +45,15 @@ namespace HapticSceneDescription.Gltf.Adapters
             _isPlaying = true;
         }
 
+        public void Start()
+        {
+            if (UseHapticDevice)
+            {
+                _hapticSystem = new GeomagicTouchController();
+                _hapticSystem.Start();
+            }
+        }
+
         public void Update()
         {
             if (!_isPlaying || _signals == null || _currentSignalIndex < 0)
@@ -55,7 +64,7 @@ namespace HapticSceneDescription.Gltf.Adapters
             {
                 if (UseHapticDevice)
                 {
-                    HapticSystem.StopActuators();
+                    _hapticSystem.Stop();
                 }
                 _isPlaying = false;
                 _mediaIndex = -1;
@@ -69,12 +78,12 @@ namespace HapticSceneDescription.Gltf.Adapters
                 {
                     foreach (var perceptionIndex in _perceptionIndices)
                     {
-                        HapticSystem.PlayValue(signal, (Actuator)perceptionIndex);
+                        _hapticSystem.PlayValue(signal);
                     }
                 }
                 else
                 {
-                    HapticSystem.PlayValue(signal);
+                    _hapticSystem.PlayValue(signal);
                 }
             }
 
@@ -90,7 +99,7 @@ namespace HapticSceneDescription.Gltf.Adapters
             _mediaIndex = -1;
             if (UseHapticDevice)
             {
-                HapticSystem.StopActuators();
+                _hapticSystem.OnDestroy();
             }
         }
 
