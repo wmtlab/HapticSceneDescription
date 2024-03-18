@@ -59,19 +59,22 @@
     <UnityVersion>2020.3.48f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\FingerModelControllerEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\HandGestureEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\NDAnimationRecorderEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\NDAnimationPlayerEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\HandModelControllerEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\MUXDataProvider_ExternalEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\ActuatorInfoEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\TransformPositionKeeperEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\SensationTestEditor.cs" />
-    <Compile Include="Assets\Plugins\GloveSDK\_Scripts\Editor\MUXDataProvider_HandEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\FingerModelControllerEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\HandGestureEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\NDAnimationRecorderEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\NDAnimationPlayerEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\HandModelControllerEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\MUXDataProvider_ExternalEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\ActuatorInfoEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\TransformPositionKeeperEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\SensationTestEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Editor\MUXDataProvider_HandEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -395,15 +398,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityDLL">
-      <HintPath>Assets\Plugins\GloveSDK\Plugins\UnityDLL.dll</HintPath>
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NDAPIWrapper">
-      <HintPath>Assets\Plugins\GloveSDK\Plugins\x86_64\NDAPIWrapper.dll</HintPath>
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NDAPIUnity">
-      <HintPath>Assets\Plugins\GloveSDK\Plugins\x86_64\NDAPIUnity.dll</HintPath>
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">

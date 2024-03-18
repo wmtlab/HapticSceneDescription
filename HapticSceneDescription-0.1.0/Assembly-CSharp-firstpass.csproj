@@ -60,53 +60,148 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\LitJson\Netstandard15Polyfill.cs" />
-    <Compile Include="Assets\Plugins\LitJson\JsonMockWrapper.cs" />
-    <Compile Include="Assets\Plugins\LitJson\JsonData.cs" />
-    <Compile Include="Assets\Plugins\LitJson\JsonWriter.cs" />
-    <Compile Include="Assets\Plugins\LitJson\Lexer.cs" />
-    <Compile Include="Assets\Plugins\LitJson\IJsonWrapper.cs" />
-    <Compile Include="Assets\Plugins\LitJson\ParserToken.cs" />
-    <Compile Include="Assets\Plugins\LitJson\JsonReader.cs" />
-    <Compile Include="Assets\Plugins\LitJson\JsonException.cs" />
-    <Compile Include="Assets\Plugins\LitJson\JsonMapper.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\VirtualHaptic.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\ReflectionUtils.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\DynamicAction.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\SceneOnlyAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Interface.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticMaterial.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\AssetOnlyAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticEditor.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\SceneControl.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticPainter.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\RectUtils.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\ValidateObjectAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\PropertyUtils.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\PostBuildDLL.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\PCI_MuxIKDataProvider.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Core\NDInitializer.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Joystick\Joystick.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Gun\GunTestController.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Grab\ObjectDetector.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Paint\ClearPanel.cs" />
+    <Compile Include="Assets\Plugins\LitJson\Netstandard15Polyfill.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticSwipe.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\NotNullAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\HapticGUIAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Utils.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\ValidateAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\HapticGUIDrawer.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticPlugin.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HelpWindow.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\AllAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticCollider.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\InGroupAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\StyledDecoratorAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Styled2DecoratorAttribute.cs" />
-    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\ValidateValueAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\PC_TeleportListener.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\HapticDepth\HapticDepthTest.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\DynamicValue.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticPlugin.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Controllers\HandGestures.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Core\NDDevicesInit.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\GUI.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Grabbing\SpawnSphere.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\PropertyUtils.cs" />
+    <Compile Include="Assets\Plugins\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticCollider.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ScriptableObjects\SO__TriggerInt.cs" />
+    <Compile Include="Assets\Plugins\LitJson\JsonData.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Controllers\HandGesture.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\ObjectMovement.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\GesturesTest.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Paint\ScreenPaint.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\GrabbingPoseTest.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\AllAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\FollowVRCam.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Gun\ShotBehaviour.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Interface.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ExternalData\PCI_MuxDataProvider_ExternalChangeSource.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Numpad\PasswordChest.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\ShowHideRoboticMesh.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ExternalData\MUXDataProvider_External.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\RectUtils.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HelpWindow.cs" />
+    <Compile Include="Assets\Plugins\LitJson\JsonWriter.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\DestroyByTime.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\ControllerIKGizmoPositionExternal.cs" />
+    <Compile Include="Assets\Plugins\LitJson\Lexer.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\SceneOnlyAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ExternalData\PCI_MUXDataProvider.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Controllers\HandModelController.cs" />
+    <Compile Include="Assets\Plugins\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Assets\Plugins\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\InGameCalibration.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\ResetGrab.cs" />
+    <Compile Include="Assets\Plugins\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\InGroupAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\IKExclusionRegionZRestrictionByX.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\ValidateValueAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Controllers\MuxData.cs" />
+    <Compile Include="Assets\Plugins\LitJson\JsonException.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\AssetOnlyAttribute.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\ValidateObjectAttribute.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\HapticGUIAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Gun\GunBehaviour.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\ControllerIKGizmoPosition.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\SensationTest.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Numpad\HapticPasswordButton.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Grab\ObjectDetectorFinger.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ScriptableObjects\PC_SO_SAT.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\IKControl.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\NDModelAxesChanger.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Numpad\NumpadInput.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Texture\TextureChanger.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\HapticGUIDrawer.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\MuxIKController.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ExternalData\MUXDataProvider_Hand.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Styled2DecoratorAttribute.cs" />
     <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\StackableFieldAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\HapticCubeTest.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\Teleport.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticEditor.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Controllers\FingerModelController.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Utils.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\ScriptableObjects\SO_TriggerEvent.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\Validator\ValidateAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\NDAnimationRecorder.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticMaterial.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\SceneControl.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Haptic\ActuatorInfo.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Controllers\UpperModelController.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticPainter.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\ContactsTest.cs" />
+    <Compile Include="Assets\Plugins\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\PC_IKExclusionRegion.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Joystick\JoystickSpawn.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\PlayerForwardCalculator.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Feeling\TextureEffect.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Grab\GrabbingPoseDetector.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\TransformPositionKeeper.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\StyledDecoratorAttribute.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Grab\GrabThings.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\IKExclusionRegionMaxDistance.cs" />
+    <Compile Include="Assets\Plugins\3DSystems\HapticsDirect\HapticScripts\HapticGUI\DynamicAction.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Utils\NDAnimationPlayer.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Grabbing\SphereBehaviour.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\IK\IKController.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\FullTestController.cs" />
+    <Compile Include="Assets\Plugins\AvatarVR\_Scripts\Tests\FullTest\Dimmer\DimmerBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Plugins\AvatarVR\Plugins\UnityDLL.xml" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.xml" />
+    <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Plugins\MpegHapticCodec\MpegHapticCodec.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Plugins\3DSystems\HapticsDirect\HapticPlugin\HapticsDirect.dll" />
+    <None Include="Assets\Plugins\AvatarVR\Plugins\NDAPI_x64.dll" />
     <None Include="Assets\Plugins\3DSystems\HapticsDirect\HapticPlugin\hd.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -419,6 +514,18 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityDLL">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDAPIWrapper">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDAPIUnity">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

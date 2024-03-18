@@ -60,12 +60,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Project\Scripts\Gltf\Controllers\Partial_SceneDescriptionLoader\ScenesLoader.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Properties\Scene.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Properties\SceneDescription.cs" />
+    <Compile Include="Assets\_Project\Scripts\HapticDriver\GeomagicTouchController.cs" />
     <Compile Include="Assets\_Project\Scripts\App.cs" />
+    <Compile Include="Assets\_Project\Scripts\HapticDriver\IHapticDriver.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Adapters\NodeAdapter.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Adapters\MpegSceneInteractivity\HapticAdapter.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Properties\MpegSceneInteractivity\Trigger.cs" />
@@ -82,7 +87,8 @@
     <Compile Include="Assets\_Project\Scripts\Gltf\Controllers\Partial_SceneDescriptionLoader\MpegSceneInteractivity\ActionsLoader.cs" />
     <Compile Include="Assets\_Project\Scripts\Gltf\Adapters\MpegSceneInteractivity\ITriggerAdapter.cs" />
     <Compile Include="Assets\_Project\Scripts\Test\PlayerController.cs" />
-    <Compile Include="Assets\_Project\Scripts\GeomagicTouch\GeomagicTouchController.cs" />
+    <Compile Include="Assets\_Project\Scripts\HapticDriver\AvatarVRController.cs" />
+    <Compile Include="Assets\_Project\Scripts\SettingUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -395,6 +401,18 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityDLL">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDAPIWrapper">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDAPIUnity">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

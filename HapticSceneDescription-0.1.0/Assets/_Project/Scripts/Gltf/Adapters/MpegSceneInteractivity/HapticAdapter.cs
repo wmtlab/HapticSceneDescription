@@ -4,7 +4,6 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using HapticSceneDescription.GeomagicTouch;
 using HapticSceneDescription.Gltf.Properties.MpegSceneInteractivity;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -20,7 +19,7 @@ namespace HapticSceneDescription.Gltf.Adapters
         private int _currentSignalIndex = -1;
         private bool _isPlaying = false;
         private CancellationTokenSource _cts;
-        private GeomagicTouchController _hapticSystem;
+        public IHapticDriver HapticDriver { get; set; }
         public void TryPlay(SetHapticAction actionData)
         {
             if (_isPlaying)
@@ -49,8 +48,7 @@ namespace HapticSceneDescription.Gltf.Adapters
         {
             if (UseHapticDevice)
             {
-                _hapticSystem = new GeomagicTouchController();
-                _hapticSystem.Start();
+                HapticDriver?.Start();
             }
         }
 
@@ -64,7 +62,17 @@ namespace HapticSceneDescription.Gltf.Adapters
             {
                 if (UseHapticDevice)
                 {
-                    _hapticSystem.Stop();
+                    if (_perceptionIndices.Count > 0)
+                    {
+                        foreach (var perceptionIndex in _perceptionIndices)
+                        {
+                            HapticDriver.Stop(perceptionIndex);
+                        }
+                    }
+                    else
+                    {
+                        HapticDriver.Stop();
+                    }
                 }
                 _isPlaying = false;
                 _mediaIndex = -1;
@@ -78,12 +86,12 @@ namespace HapticSceneDescription.Gltf.Adapters
                 {
                     foreach (var perceptionIndex in _perceptionIndices)
                     {
-                        _hapticSystem.PlayValue(signal);
+                        HapticDriver.PlayValue(signal, perceptionIndex);
                     }
                 }
                 else
                 {
-                    _hapticSystem.PlayValue(signal);
+                    HapticDriver.PlayValue(signal);
                 }
             }
 
@@ -99,7 +107,7 @@ namespace HapticSceneDescription.Gltf.Adapters
             _mediaIndex = -1;
             if (UseHapticDevice)
             {
-                _hapticSystem.OnDestroy();
+                HapticDriver.OnDestroy();
             }
         }
 

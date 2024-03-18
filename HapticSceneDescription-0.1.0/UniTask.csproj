@@ -60,6 +60,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll" />
+    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\UniTask\Runtime\CompilerServices\AsyncUniTaskMethodBuilder.cs" />
@@ -459,6 +462,18 @@
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityDLL">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDAPIWrapper">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDAPIUnity">
+      <HintPath>Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

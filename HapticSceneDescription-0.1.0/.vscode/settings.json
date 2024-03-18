@@ -52,5 +52,8 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "HapticSceneDescription-0.1.0.sln",
-    "todo-tree.tree.scanMode": "workspace"
+    "todo-tree.tree.scanMode": "workspace",
+    "cSpell.words": [
+        "Geomagic"
+    ]
 }
