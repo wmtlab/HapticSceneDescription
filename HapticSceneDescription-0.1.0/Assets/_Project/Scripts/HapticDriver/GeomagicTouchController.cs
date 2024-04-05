@@ -10,14 +10,26 @@ namespace HapticSceneDescription
         private int _vibrationGFrequency = 100;
         private float _scaleFactor = 0.02f;
 
+        private bool _enabled = false;
+
         public void Start()
         {
+            if (_enabled)
+            {
+                return;
+            }
+            _enabled = true;
             initDevice(_deviceIdentifier);
             startSchedulers();
         }
 
         public void OnDestroy()
         {
+            if (!_enabled)
+            {
+                return;
+            }
+            _enabled = false;
             disconnectAllDevices();
         }
 
@@ -41,43 +53,33 @@ namespace HapticSceneDescription
             setVibrationValues(_deviceIdentifier, _vibrationGDir, 0.0, 0, 0.0);
         }
 
-        public bool TryGetTouchPosition(out Vector3 position)
+        public double[] _matInput = new double[16];
+        public bool TryGetRawMatrix(out Matrix4x4 rawMatrix)
         {
-            double[] matInput = new double[16];
-            getTransform(_deviceIdentifier, matInput);
+            getTransform(_deviceIdentifier, _matInput);
 
             for (int ii = 0; ii < 16; ii++)
                 if (ii % 4 != 3)
-                    matInput[ii] *= _scaleFactor;
+                    _matInput[ii] *= _scaleFactor;
 
             Matrix4x4 mat;
-            mat.m00 = (float)matInput[0];
-            mat.m01 = (float)matInput[1];
-            mat.m02 = (float)matInput[2];
-            mat.m03 = (float)matInput[3];
-            mat.m10 = (float)matInput[4];
-            mat.m11 = (float)matInput[5];
-            mat.m12 = (float)matInput[6];
-            mat.m13 = (float)matInput[7];
-            mat.m20 = (float)matInput[8];
-            mat.m21 = (float)matInput[9];
-            mat.m22 = (float)matInput[10];
-            mat.m23 = (float)matInput[11];
-            mat.m30 = (float)matInput[12];
-            mat.m31 = (float)matInput[13];
-            mat.m32 = (float)matInput[14];
-            mat.m33 = (float)matInput[15];
-            position = mat.transpose.ExtractPosition();
-            if (position.x == float.NaN || position.y == float.NaN || position.z == float.NaN)
-            {
-                position = Vector3.zero;
-                return false;
-            }
-            if (float.IsInfinity(position.x) || float.IsInfinity(position.y) || float.IsInfinity(position.z))
-            {
-                position = Vector3.zero;
-                return false;
-            }
+            mat.m00 = (float)_matInput[0];
+            mat.m01 = (float)_matInput[1];
+            mat.m02 = (float)_matInput[2];
+            mat.m03 = (float)_matInput[3];
+            mat.m10 = (float)_matInput[4];
+            mat.m11 = (float)_matInput[5];
+            mat.m12 = (float)_matInput[6];
+            mat.m13 = (float)_matInput[7];
+            mat.m20 = (float)_matInput[8];
+            mat.m21 = (float)_matInput[9];
+            mat.m22 = (float)_matInput[10];
+            mat.m23 = (float)_matInput[11];
+            mat.m30 = (float)_matInput[12];
+            mat.m31 = (float)_matInput[13];
+            mat.m32 = (float)_matInput[14];
+            mat.m33 = (float)_matInput[15];
+            rawMatrix = mat.transpose;
             return true;
         }
 
@@ -87,5 +89,6 @@ namespace HapticSceneDescription
         [DllImport("HapticsDirect")] public static extern void disconnectAllDevices();
 
         [DllImport("HapticsDirect")] public static extern void getTransform(string configName, double[] matrix16);
+
     }
 }

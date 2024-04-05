@@ -55,5 +55,8 @@
     "todo-tree.tree.scanMode": "workspace",
     "cSpell.words": [
         "Geomagic"
-    ]
+    ],
+    "files.associations": {
+        "*.gltf": "jsonc",
+    }
 }

@@ -59,10 +59,7 @@
     <UnityVersion>2020.3.48f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\ASUS\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIUnity.dll" />
-    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\UnityDLL.dll" />
-    <Analyzer Include="D:\Unity\HapticSceneDescription\HapticSceneDescription-0.1.0\Assets\Plugins\AvatarVR\Plugins\x86_64\NDAPIWrapper.dll" />
+    <Analyzer Include="C:\Users\共用\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.1\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\UniTask\Runtime\External\Addressables\AddressablesAsyncExtensions.cs" />

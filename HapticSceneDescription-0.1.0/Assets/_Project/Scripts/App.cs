@@ -15,6 +15,7 @@ namespace HapticSceneDescription
         private SceneDescription _sd;
         private InteractivityController _interactivity;
         private HapticAdapter _hapticAdapter;
+        private PlayerController _playerController;
 
         private async void Start()
         {
@@ -40,25 +41,29 @@ namespace HapticSceneDescription
             _hapticAdapter.Start();
             _interactivity = new InteractivityController(_sd);
             // * Add a PlayerController to the player GameObject
-            var playerController = GameObject.Find("player").AddComponent<PlayerController>();
-            playerController.inputType = inputType;
+            _playerController = new PlayerController
+            {
+                Transform = GameObject.Find("player").transform,
+                inputType = inputType
+            };
             if (inputType == PlayerController.InputType.GeomagicTouch)
             {
                 if (outputType == OutputType.GeomagicTouch)
                 {
-                    playerController.GeomagicTouch = hapticDriver as GeomagicTouchController;
+                    _playerController.GeomagicTouch = hapticDriver as GeomagicTouchController;
                 }
                 else
                 {
                     var geomagicTouch = new GeomagicTouchController();
-                    playerController.GeomagicTouch = geomagicTouch;
+                    _playerController.GeomagicTouch = geomagicTouch;
                 }
             }
-
+            _playerController?.Start();
         }
 
         private void FixedUpdate()
         {
+            _playerController?.Update();
             _interactivity?.Update();
             _hapticAdapter?.Update();
         }
@@ -66,6 +71,7 @@ namespace HapticSceneDescription
         private void OnDisable()
         {
             _hapticAdapter?.Stop();
+            _playerController?.Stop();
         }
 
         public enum OutputType
